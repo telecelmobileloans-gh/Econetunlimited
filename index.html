@@ -6,6 +6,20 @@
     <meta name="theme-color" content="#003366">
     <title>EcoCash Data | Non-Expiry USD Bundles · Zimbabwe</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tawk.to Script - Properly Placed in Head -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6a4d1b2d549ffd1d45a159bb/1jsuj4bc7';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    
     <style>
         :root {
             --blue-dark: #001a33;
@@ -95,6 +109,9 @@
             font-size: 12px !important;
             box-shadow: 0 4px 12px rgba(0,51,102,0.25);
             transition: all 0.2s !important;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
         .nav-cta:hover { background: var(--blue-light) !important; transform: translateY(-1px); }
@@ -141,6 +158,10 @@
             padding: 14px;
             border-radius: 50px;
             border-bottom: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 700;
         }
 
         /* Hero */
@@ -213,6 +234,9 @@
             font-size: 13px;
             transition: all 0.2s;
             box-shadow: 0 4px 16px rgba(0,170,255,0.3);
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
 
         .btn-hero-1:hover { background: white; transform: translateY(-2px); }
@@ -227,6 +251,8 @@
             font-size: 13px;
             border: 2px solid rgba(255,255,255,0.3);
             transition: all 0.2s;
+            cursor: pointer;
+            font-family: inherit;
         }
 
         .btn-hero-2:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
@@ -417,19 +443,7 @@
         .step-n { width: 38px; height: 38px; background: var(--blue-bright); color: var(--blue-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; margin: 0 auto 10px; }
         .step h3 { font-size: 0.85rem; font-weight: 800; margin-bottom: 4px; }
         .step p { color: rgba(255,255,255,0.6); font-size: 0.75rem; }
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a4d1b2d549ffd1d45a159bb/1jsuj4bc7';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+
         /* Footer */
         footer { background: #000d1a; color: white; padding: 44px 5% 18px; }
 
@@ -468,10 +482,10 @@ s0.parentNode.insertBefore(s1,s0);
 </head>
 <body>
     <div class="topbar">
-        <span>&#127487;&#127484; Zimbabwe</span>
-        <span>&#9889; Instant Activation</span>
-        <span>&#9854;&#65039; Non-Expiry</span>
-        <span>&#128274; Secure</span>
+        <span>🇿🇼 Zimbabwe</span>
+        <span>⚡ Instant Activation</span>
+        <span>🔄 Non-Expiry</span>
+        <span>🔒 Secure</span>
     </div>
 
     <header>
@@ -480,20 +494,20 @@ s0.parentNode.insertBefore(s1,s0);
             <a href="#bundles">Data Plans</a>
             <a href="#mix">Mix Builder</a>
             <a href="#how">How It Works</a>
-            <a href="login.html?data=4%20GB&price=0.60" class="nav-cta">Get Started</a>
+            <button class="nav-cta" onclick="goLogin('4 GB', '0.60')">Get Started</button>
         </nav>
-        <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <div class="mobile-nav" id="mobNav">
             <a href="index.html">Home</a>
             <a href="#bundles" onclick="closeMenu()">Data Plans</a>
             <a href="#how" onclick="closeMenu()">How It Works</a>
-            <a href="login.html?data=4%20GB&price=0.60" class="m-cta">Get Started</a>
+            <button class="m-cta" onclick="goLogin('4 GB', '0.60'); closeMenu();">Get Started</button>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-inner">
-            <div class="hero-badge">&#127487;&#127484; Zimbabwe's #1 Data Provider</div>
+            <div class="hero-badge">🇿🇼 Zimbabwe's #1 Data Provider</div>
             <h1>Non-Expiry <span class="hl">USD Data</span> Bundles</h1>
             <p>Buy affordable data bundles via EcoCash. Instant activation, never expires, all networks.</p>
             <div class="hero-stats">
@@ -502,8 +516,8 @@ s0.parentNode.insertBefore(s1,s0);
                 <div class="stat-item"><div class="num">$0.60</div><div class="lbl">From</div></div>
             </div>
             <div class="hero-btns">
-                <a href="#bundles" class="btn-hero-1">View Data Plans</a>
-                <a href="login.html?data=4%20GB&price=0.60" class="btn-hero-2">Get Started &#8594;</a>
+                <button class="btn-hero-1" onclick="document.getElementById('bundles').scrollIntoView({behavior:'smooth'})">View Data Plans</button>
+                <button class="btn-hero-2" onclick="goLogin('4 GB', '0.60')">Get Started →</button>
             </div>
         </div>
     </section>
@@ -521,12 +535,12 @@ s0.parentNode.insertBefore(s1,s0);
                 <button class="mix-tab" onclick="pickMix(4)">Monthly<span class="pr">$9.90</span></button>
             </div>
             <div class="mix-grid">
-                <div class="mix-item"><div class="ic">&#128222;</div><div class="lb">Voice</div><div class="vl" id="mV">20 Min</div></div>
-                <div class="mix-item"><div class="ic">&#128172;</div><div class="lb">SMS</div><div class="vl" id="mS">25 SMS</div></div>
-                <div class="mix-item"><div class="ic">&#127760;</div><div class="lb">Data</div><div class="vl" id="mD">3 GB</div></div>
+                <div class="mix-item"><div class="ic">📞</div><div class="lb">Voice</div><div class="vl" id="mV">20 Min</div></div>
+                <div class="mix-item"><div class="ic">💬</div><div class="lb">SMS</div><div class="vl" id="mS">25 SMS</div></div>
+                <div class="mix-item"><div class="ic">🌐</div><div class="lb">Data</div><div class="vl" id="mD">3 GB</div></div>
             </div>
             <div class="mix-price"><div class="lb">Your bundle price</div><div class="am" id="mP">USD 0.60</div></div>
-            <button class="btn-sub" id="mBtn" onclick="subMix()">Subscribe &mdash; Daily</button>
+            <button class="btn-sub" id="mBtn" onclick="subMix()">Subscribe — Daily</button>
         </div>
     </section>
 
@@ -535,12 +549,12 @@ s0.parentNode.insertBefore(s1,s0);
         <h2 class="s-title">Non-Expiry Data Bundles</h2>
         <p class="s-sub">Pay via EcoCash. Instant activation. Never expires.</p>
         <div class="b-grid">
-            <div class="b-card"><div class="b-badge">Starter</div><div class="b-data">4 GB</div><div class="b-price">USD 0.60</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="pick('4 GB','0.60')">Get Bundle</button></div>
-            <div class="b-card"><div class="b-badge">Standard</div><div class="b-data">10 GB</div><div class="b-price">USD 1.40</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="pick('10 GB','1.40')">Get Bundle</button></div>
-            <div class="b-card"><div class="b-badge">Premium</div><div class="b-data">20 GB</div><div class="b-price">USD 2.80</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="pick('20 GB','2.80')">Get Bundle</button></div>
-            <div class="b-card pop"><div class="b-badge hot">Best Value</div><div class="b-data">50 GB</div><div class="b-price">USD 6.50</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li><li>Priority Support</li></ul><button class="btn-b" onclick="pick('50 GB','6.50')">Get Bundle</button></div>
-            <div class="b-card"><div class="b-badge">Enterprise</div><div class="b-data">100 GB</div><div class="b-price">USD 12.00</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="pick('100 GB','12.00')">Get Bundle</button></div>
-            <div class="b-card"><div class="b-badge">Ultimate</div><div class="b-data">200 GB</div><div class="b-price">USD 19.80</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="pick('200 GB','19.80')">Get Bundle</button></div>
+            <div class="b-card"><div class="b-badge">Starter</div><div class="b-data">4 GB</div><div class="b-price">USD 0.60</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="goLogin('4 GB','0.60')">Get Bundle</button></div>
+            <div class="b-card"><div class="b-badge">Standard</div><div class="b-data">10 GB</div><div class="b-price">USD 1.40</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="goLogin('10 GB','1.40')">Get Bundle</button></div>
+            <div class="b-card"><div class="b-badge">Premium</div><div class="b-data">20 GB</div><div class="b-price">USD 2.80</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="goLogin('20 GB','2.80')">Get Bundle</button></div>
+            <div class="b-card pop"><div class="b-badge hot">Best Value</div><div class="b-data">50 GB</div><div class="b-price">USD 6.50</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li><li>Priority Support</li></ul><button class="btn-b" onclick="goLogin('50 GB','6.50')">Get Bundle</button></div>
+            <div class="b-card"><div class="b-badge">Enterprise</div><div class="b-data">100 GB</div><div class="b-price">USD 12.00</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="goLogin('100 GB','12.00')">Get Bundle</button></div>
+            <div class="b-card"><div class="b-badge">Ultimate</div><div class="b-data">200 GB</div><div class="b-price">USD 19.80</div><ul class="b-list"><li>Non-Expiry</li><li>Instant Activation</li><li>All Networks</li></ul><button class="btn-b" onclick="goLogin('200 GB','19.80')">Get Bundle</button></div>
         </div>
     </section>
 
@@ -549,10 +563,10 @@ s0.parentNode.insertBefore(s1,s0);
         <h2 class="s-title">Why Choose Us?</h2>
         <p class="s-sub">Trusted by millions across Zimbabwe.</p>
         <div class="feat-grid">
-            <div class="feat-card"><div class="feat-ic">&#9854;&#65039;</div><h3>Never Expires</h3><p>Your data stays valid forever.</p></div>
-            <div class="feat-card"><div class="feat-ic">&#9889;</div><h3>Instant Activation</h3><p>Buy and browse immediately.</p></div>
-            <div class="feat-card"><div class="feat-ic">&#128260;</div><h3>Auto Rollover</h3><p>Unused data carries forward.</p></div>
-            <div class="feat-card"><div class="feat-ic">&#128274;</div><h3>Bank-Level Security</h3><p>256-bit encryption on all transactions.</p></div>
+            <div class="feat-card"><div class="feat-ic">🔄</div><h3>Never Expires</h3><p>Your data stays valid forever.</p></div>
+            <div class="feat-card"><div class="feat-ic">⚡</div><h3>Instant Activation</h3><p>Buy and browse immediately.</p></div>
+            <div class="feat-card"><div class="feat-ic">💾</div><h3>Auto Rollover</h3><p>Unused data carries forward.</p></div>
+            <div class="feat-card"><div class="feat-ic">🔒</div><h3>Bank-Level Security</h3><p>256-bit encryption on all transactions.</p></div>
         </div>
     </section>
 
@@ -579,8 +593,8 @@ s0.parentNode.insertBefore(s1,s0);
             <div class="ft-col"><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
         </div>
         <div class="ft-bottom">
-            <p>&copy; 2026 Econet Wireless &middot; EcoCash Zimbabwe</p>
-            <div class="ft-badges"><span>&#128274; 256-bit Encrypted</span><span>&#9989; PCI DSS</span></div>
+            <p>&copy; 2026 Econet Wireless · EcoCash Zimbabwe</p>
+            <div class="ft-badges"><span>🔒 256-bit Encrypted</span><span>✓ PCI DSS</span></div>
         </div>
     </footer>
 
@@ -605,29 +619,18 @@ s0.parentNode.insertBefore(s1,s0);
             document.getElementById('mS').textContent = plans[i].s;
             document.getElementById('mD').textContent = plans[i].d;
             document.getElementById('mP').textContent = 'USD ' + plans[i].p;
-            document.getElementById('mBtn').textContent = 'Subscribe \u2014 ' + plans[i].n;
+            document.getElementById('mBtn').textContent = 'Subscribe — ' + plans[i].n;
         }
 
         function subMix() {
             const p = plans[cur];
             const b = `${p.d} + ${p.v} + ${p.s} (${p.n})`;
-            window.location.href = `login.html?data=${encodeURIComponent(b)}&price=${p.p}`;
+            goLogin(b, p.p);
         }
 
-        function pick(d, p) { window.location.href = `login.html?data=${encodeURIComponent(d)}&price=${p}`; }
-        <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a4d1b2d549ffd1d45a159bb/1jsuj4bc7';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+        function goLogin(data, price) {
+            window.location.href = `login.html?data=${encodeURIComponent(data)}&price=${price}`;
+        }
     </script>
 </body>
 </html>
